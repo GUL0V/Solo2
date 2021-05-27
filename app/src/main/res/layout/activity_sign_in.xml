@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F1126"
+    android:screenOrientation="portrait"
+    tools:context=".MainActivity">
+
+
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="106dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/usernames"
+        />
+
+    <EditText
+        android:id="@+id/usernames"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/et_bg"
+        android:hint="Электронный адрес"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#8c8c8c"
+        android:layout_above="@+id/passwords"
+        android:textSize="13sp"
+        android:paddingStart="20dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:paddingEnd="16dp"
+        />
+
+
+
+
+
+
+
+
+
+    <EditText
+        android:id="@+id/passwords"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/et_bg"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:layout_centerVertical="true"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#8c8c8c"
+        android:textSize="13sp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+
+        android:paddingStart="20dp"
+        android:paddingEnd="16dp"/>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/passwords"
+        android:background="@drawable/btn_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Вход"
+        android:textSize="13dp"
+        android:textAllCaps="false"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:textColor="#FFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Войти"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="14dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_login"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="24dp"
+        android:id="@+id/forgot_password">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Получить помощь со входом"
+            android:textColor="#FFF"
+            android:layout_marginLeft="2sp"
+            android:layout_toEndOf="@+id/forgot_password2"
+            android:textSize="11sp"
+            android:singleLine="true"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/forgot_password2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Забыли свои учетные данные?"
+            android:textColor="#FFF"
+            android:textSize="11sp"/>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_toStartOf="@+id/or"
+        android:layout_height="1dp"
+        android:background="#e0e0e0"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/forgot_password"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/forgot_password"
+        android:layout_centerHorizontal="true"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="или"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="true"
+        android:textSize="13sp" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/forgot_password"
+        android:layout_toEndOf="@+id/or"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="15dp"
+        android:layout_height="1dp"
+        android:background="#e0e0e0"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/registr"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/or">
+
+        <TextView
+            android:id="@+id/text111"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="У вас еще нет аккаунта? "
+            android:textSize="11sp"
+            android:textColor="#FFF"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:text="Зарегистрируйтесь."
+            android:textSize="11sp"
+            android:layout_toEndOf="@+id/text111"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#60FFFFFF"
+        android:id="@+id/progress_circular"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
